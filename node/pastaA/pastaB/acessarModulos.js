@@ -14,4 +14,4 @@ http.createServer((req, res) => {
            Amo 
                 sz`)
 res.end()
-}).listen(8080)
+}).listen(8080) //localhost:8080 Digite no browser
