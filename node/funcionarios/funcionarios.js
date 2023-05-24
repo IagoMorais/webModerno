@@ -1,7 +1,7 @@
 const url = ''
 const axios = require('axios')
 
-const chinesa = f => f.pais === 'China'
+const chinesa = f => f.pais === 'China' 
 const mulheres = f => f.genero === 'F'
 const menorSalario = (func, funcAtual) => {
     return func.salario > funcAtual.salario ? func : funcAtual
