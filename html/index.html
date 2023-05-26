@@ -13,9 +13,26 @@
         <h1> Exercicios HTML </h1>
     </header>
     <nav>
-        <a href="exercios/teste.html">00</a>
+        <a href="exercicios/teste.html">00 - teste</a> | <!--busca a tag em outra pasta -->
+        <a href="exercicios/temp.html">Temp</a> <!--busca a tag em outra pasta -->
     </nav>
     <section id="conteudo"></section>
+    <footer>
+        <br>
+        Cursode Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
 </body>
 
 </html>
